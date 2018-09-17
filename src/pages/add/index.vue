@@ -3,7 +3,7 @@
     <i class="iconfont back" @click="backToHome">&#xe641;</i>
     <div class="inputBox">
       <div class="inputName">事件名称</div>
-      <input type="text" class="input" placeholder="event name" :value="eventName">
+      <input type="text" class="input" placeholder="event name" v-model="name">
       <div class="inputName">截止时间</div>
       <picker mode="date" :value="date" start="2018-9-15" end="2100-1-1" @change="bindDateChange">
         <view class="picker">
@@ -37,7 +37,7 @@ import store from "@/store/store";
 export default {
   data() {
     return {
-      eventName: "",
+      name: "",
       deadline: "",
       date: "",
       notification: false,
@@ -71,6 +71,7 @@ export default {
       this.notification = !this.notification;
     },
     submit() {
+      console.log(this.name)
       store.commit("addEvent", {
         name: this.name,
         notification: this.notification,
@@ -79,7 +80,9 @@ export default {
       });
       this.backToHome();
     }
-  }
+  },
+  mounted() {
+  },
 };
 </script>
 

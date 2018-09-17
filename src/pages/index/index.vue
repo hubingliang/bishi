@@ -47,7 +47,9 @@ export default {
   created() {
     // 调用应用实例的方法获取全局数据
     // this.getUserInfo();
-  }
+  },
+  mounted() {
+  },
 };
 </script>
 
@@ -70,27 +72,32 @@ export default {
   .eventBox {
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
+    align-items: flex-start;
     width: 100vw;
     border: 1px solid #333;
     margin-top: 11vh;
     flex-wrap: wrap;
+    min-height: 15vh;
     .event {
       height: 15vh;
       width: 100vw;
       border: 1px solid #333;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
       .name {
         position: absolute;
         top: 5px;
-        left: 5px;
+        left: 10px;
         font-size: 25px;
       }
       .deadLine {
         position: absolute;
-        right: 20px;
+        right: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
+        bottom: 5px;
         .time {
           font-size: 35px;
           color: #333;

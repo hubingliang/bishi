@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import store from "@/store/store";
+
 export default {
   data() {
     return {};
@@ -20,6 +22,7 @@ export default {
         url: "/pages/index/main"
       });
     }, 0);
+    store.commit('countDown')
   }
 }
 </script>
