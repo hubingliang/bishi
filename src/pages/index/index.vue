@@ -28,8 +28,8 @@ export default {
     };
   },
   computed: {
-    eventList(){
-      return store.state.eventList
+    eventList() {
+      return store.state.eventList;
     }
   },
   components: {
@@ -70,32 +70,35 @@ export default {
   .eventBox {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: nowrap;
-    position: relative;
     width: 100vw;
-    height: 15vh;
     border: 1px solid #333;
     margin-top: 11vh;
-    .name {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      font-size: 25px;
-    }
-    .deadLine {
-      position: absolute;
-      right: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .time {
-        font-size: 35px;
-        color: #333;
+    flex-wrap: wrap;
+    .event {
+      height: 15vh;
+      width: 100vw;
+      border: 1px solid #333;
+      .name {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: 25px;
       }
-      span {
-        margin: 0 10px;
-        font-size: 20px;
+      .deadLine {
+        position: absolute;
+        right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .time {
+          font-size: 35px;
+          color: #333;
+        }
+        span {
+          margin: 0 10px;
+          font-size: 20px;
+        }
       }
     }
   }

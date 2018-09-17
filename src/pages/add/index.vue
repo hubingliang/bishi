@@ -53,7 +53,6 @@ export default {
     },
     bindDateChange(e) {
       let nowTime = new Date();
-      let a = e.target.value.split('-').join(',')
       let targetTime = new Date(e.target.value.split('-').join('/'));
       let timeDifference = (targetTime - nowTime) / 1000;
       let day = Math.floor(timeDifference / 86400);
@@ -67,7 +66,6 @@ export default {
         second: second
       };
       this.deadline = e.target.value;
-      console.log(a)
     },
     changeSwitch() {
       this.notification = !this.notification;
@@ -79,7 +77,6 @@ export default {
         deadline: this.deadlineData,
         importance: this.importance
       });
-      console.log(this.deadlineData);
       this.backToHome();
     }
   }
